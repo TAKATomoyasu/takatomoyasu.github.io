@@ -1,10 +1,63 @@
-h1 {
-  color: #159351;
+body {
+  font-family: Roboto;
 }
 
-body {
-  background-color: #f3f1d2;
-  margin: 30px;
-  
-  font-family: Klee;
+.header{  
+  height:90px;
+/*   背景は一色なので、header内の文字も全て同じ色でいい */
+  background-color:  #7EC57F;
+  color:#fff;
 }
+
+.header-logo{
+  float:left;
+  font-size:36px;
+  padding:20px 40px;
+}
+
+.header-list li{
+  list-style:none;
+  float:left;
+  padding: 33px 20px;
+}
+
+
+.main{
+  padding:100px;
+  background-color:#F0FFF0;
+}
+.main li::before{
+  content: "米";
+}
+
+.copy-container h1{
+  font-size: 120px;
+}
+.copy-container h2{
+  font-size: 60px;
+}
+
+.footer{
+  height:120px;
+  padding:40px;
+  background-color: #2F553F;
+  color:#fff;
+}
+
+.footer-logo{
+  float:left;
+  font-size:32px;
+/*   padding:20px 40px; */
+}
+
+.footer-list{
+  float:right;
+}
+
+.footer-list li{
+  list-style:none;
+  padding-bottom: 20px;
+}
+
+
+/* #2F553F #5A886F #4E6E31 #7EC53F */
