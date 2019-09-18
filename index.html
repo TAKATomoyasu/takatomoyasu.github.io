@@ -1,81 +1,95 @@
 <!DOCTYPE html>
-
-<html lang="ja">
-
+<html>
 <head>
-  <meta charset="UTF-8">
-  <title>むおお( っ ‘ᾥ’ )っ</title>
-  <link rel="stylesheet" , href="style.css">
+  <meta charset="utf-8">
+  <title>Taka-chin Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=M+PLUS+Rounded+1c:300,400,500,700,800&display=swap&subset=japanese" rel="stylesheet"> 
 </head>
 
 <body>
-  <!--   まずヘッダー、メイン、フッターの３つに分割 -->
-  <div class="header">
-    <!--     ロゴとメニューでさらに分割 -->
-    <div class="header-logo">Taka-chin</div>
-    <div class="header-list">
-      <ul>
-        <li>特技</li>
-        <li>作ったもの</li>
-        <li>作業中</li>
-        <li>できること</li>
-      </ul>
+  <header>
+    <div class="container">
+      <div class="header-left">
+        <img class="logo" src="https://takatomoyasu.github.io/images/main_logo.png">
+      </div>
+      <div class="header-right">
+        <!--           <a href="#" class="login">ログイン</a> -->
+      </div>
     </div>
-  </div>
-  <div class="main">
-    <div class="copy-container">
+  </header>
+  <div class="top-wrapper">
+    <div class="container">
       <h1>パンパカパン！( ^ω^ )</h1>
-      <h2>↓これがたかぽこちん</h2>
-<!--       <br/> -->
-      <img src="https://takatomoyasu.github.io/images/face_icon.jpg" alt="face_ion" />
-    </div>
-    <h2>特技</h2>
-    <ul>
-      <li>ごはんを食べること</li>
-      <li>おなかを冷やすこと</li>
-      <li>下痢気味になること</li>
-    </ul>
-    <br>
-    <h2>なんかこれまでに生産したもの</h2>
-    <ul>
-      <li><a href="https://www.youtube.com/watch?v=-ZQdzzC1qpI">VR Piano Visualizer</a></li>
-      <li><a href="https://www.youtube.com/watch?v=-ZQdzzC1qpI">VR Piano Visualizer</li>
-    <li><a href="https://unityroom.com/games/smapho_catch">あらぶり☆スマホキャッチ</a>
-        <li><a href="https://camp-fire.jp/projects/view/124330">音楽のアトラクション（映像演出）</a></li>
-        <li>Pre-phone Box（システム開発）</li>
-        <li>PC用ゲーム Nyankee Go Home（音楽・効果音制作）</li>
-        <li>Processing映像作品</li>
-    </ul>
-    <br>
-    <h2>作業中</h2>
-    <li><a href="game/stopwatch.html">ストップウォッチでなんか遊ぶやつ</a></li>
-    </ul>
-    <br>
-    <h2>なんかできること</h2>
-    <ul>
-      <li>ごはんを美味しく食べること</li>
-      <li>ピアノ演奏＆調律</li>
-      <li>英語で楽しくおしゃべり</li>
-      <li>コンプーターと仲が良い</li>
-      画像編集（Photoshop, Illustrator）<br> 　音声編集、音源作り（Audacity, Logic）<br> 　簡単なモデリング（Maya）
-      <br> 　映像編集（FinalCut）
-      <li>プログラミング</li>
-      Unity(2D, 3D, VR), C#, シェーダー（HLSL）<br> 　Max msp <br> 　Processing
-      </li>
-      <li>高速でクソゲーを作り上げること</li>
-      <li>大量のショートカットキーを設定し、高速でパソコンを操ること</li>
-    </ul>
-  </div>
-  <div class="footer">
-    <div class="footer-logo">Taka-chin</div>
-    <div class="footer-list">
-      <ul>
-        <li>:(´ω`」 ∠):</li>
-        <li>( ﾟдﾟ)ﾊｯ!</li>
-        <li>( ´ ω`)むにゃむにゃ</li>
-      </ul>
+      <br>
+      <h2>たかぽこちんとは？</h2>
+      <div class="btn-wrapper">
+        <img src="https://takatomoyasu.github.io/images/face_icon.jpg" alt="face_ion" class="profile-image">
+        <p>↑これがたかぽこちんなのだ！</p>
+        <br>
+        <h3>たかぽこちんには何ができるのか！？</h3>        
+        おいしくごはんを食べられる<br>
+        楽しいおしゃべりができる<br>
+        おなかは冷えやすい<br>
+        あとピアノ演奏と調律とプログラミングとかできる<br>        
+      </div>
+              <a href="https://twitter.com/tckr_tckr" class="btn twitter"><span class="fa fa-twitter"></span>Twitterでフレンズになろう( ^ω^ )</a>
     </div>
   </div>
+  <div class="lesson-wrapper">
+    <div class="container">
+      <div class="heading">
+        <h2>なんかこれまでに作ったもの</h2>
+      </div>
+      <div class="lessons">
+        <div class="lesson">
+          <div class="lesson-icon">
+            <img src="https://takatomoyasu.github.io/images/VRPiano.png">
+            <p>VR Piano<br> Visualizer</p>
+          </div>
+          <p class="txt-contents">体験者の演奏した音がVR空間内で映像化する作品。体験すると楽しい。</p>
+        </div>
+        <div class="lesson">
+          <div class="lesson-icon">
+            <img src="https://takatomoyasu.github.io/images/Attraction.png">
+            <p>音楽の<br>アトラクション</p>
+          </div>
+          <p class="txt-contents">クラシック音楽の演奏に連動して生成される映像作品。サロンコンサートの映像演出として制作した。見ると楽しい。</p>
+        </div>
+        <div class="lesson">
+          <div class="lesson-icon">
+            <img src="https://takatomoyasu.github.io/images/Phonecatch.png">
+            <p>あらぶり☆<br>スマホキャッチ</p>
+          </div>
+          <p class="txt-contents">1weekゲームジャム大会にて「ギリギリ」というテーマで制作したPC用ゲーム作品。手から滑り落ちるスマホを落とさないようキャッチするゲーム。遊ぶと楽しい。</p>
+        </div>
+        <div class="lesson">
+          <div class="lesson-icon">
+            <img src="https://takatomoyasu.github.io/images/Pre-Phone.png">
+            <p>Pre-Phone Box</p>
+          </div>
+          <p class="txt-contents">公衆電話を使った友人の作品のシステムを開発。受話器に向かって話した言葉を自分で聞くことができる。発生のフレーズ判定、システムの安定性、省電力などに注意し、iPhoneアプリに書き出して運用した。自分とおしゃべりできる。
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="message-wrapper">
+    <div class="container">
+      <div class="heading">
+        <h2>さぁ、あなたもたかぽこちんと仲良く遊んでみませんか？</h2>
+        <h3>Let's play something with Taka-poko-chin</h3>
+      </div>
+      <span class="btn message">さっそく遊ぶ</span>
+    </div>
+  </div>
+  <footer>
+    <div class="container">
+      <img src="https://takatomoyasu.github.io/images/footer_logo.png">
+      <p>© TAKA Tomoyasu 2019</p>
+    </div>
+  </footer>
 </body>
-
 </html>
