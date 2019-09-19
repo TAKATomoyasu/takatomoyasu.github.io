@@ -2,8 +2,9 @@
 // マウスホバーで透明になっちゃうとか
 $(function(){
   $('.profile-image').fadeIn('slow');
-  $('.message').hover(()=>{
-    $('.message').fadeOut();
+  $('.message').click(()=>{
+    // $('.message').fadeOut();
+    $('.message').text('まだ作り途中だもん');
   });
   
   //ヘッダーロゴの切り替え
