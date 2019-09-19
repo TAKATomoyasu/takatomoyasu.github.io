@@ -74,6 +74,7 @@ a {
   margin-right: 5px;
 }
 
+
 .profile-image{
   border-radius:100%;  
    border: 3px solid #ccc;
@@ -116,7 +117,6 @@ header {
   color: white;
   display: block;
 }
-
 .lesson-wrapper {
   height: 500px;
   padding-bottom: 80px;
@@ -148,6 +148,9 @@ header {
   top: 60px;
   width: 100%;
   color: white;
+}
+.clear{
+  clear:left;
 }
 
 .txt-contents {
@@ -192,31 +195,78 @@ footer p {
 
 footer {
   padding-top: 30px;
+  background-color:#eee;
 }
 
 
-@media(max-width: 1000px){
-  .lesson {
-    float: left;
+.menu-icon {
+  color: white;
+  float: right;
+  font-size: 25px;
+  padding: 21px 0;
+  display:none;
+}
+
+
+/* @media(max-width: 1000px){ */
+@media screen and (max-width:1000px) {
+   .lesson {
     width: 50%;
+    margin-bottom: 50px;
+  }
+
+  footer {
+    text-align: center;
+  }
+
+  .top-wrapper h1 {
+    font-size: 32px;
+  }
+
+  .heading h2 {
+    font-size: 20px;
   }
 }
 
 
-@media(max-width: 670px){
+/* @media(max-width: 670px){ */
+@media screen and (max-width:320px) {  
+  .lesson {
+    width: 100%;
+  }
 
   .btn {
-    width:100%;
-  }
-  .lesson {
-    float: left;
     width: 100%;
-}
-  .top-wrapper h1{
-/*     font-size:24px; */
   }
-  .top-wrapper h2{
-/*     font-size:14px; */
+
+  .facebook {
+    margin-bottom: 10px;
   }
   
+  .top-wrapper {
+    text-align: left;
+  }
+
+  /* header-rightクラスのdisplayをnoneに指定してください */
+  .header-right{
+    display:none;
+  }
+  
+  /* menu-iconクラスのdisplayをblockに指定してください  */
+    .menu-icon{
+      display:block;
+    }
+  
+    .menu-right{
+    display:block;
+  }
+  
+  
+  .top-wrapper h1 {
+    font-size: 24px;
+  }
+
+  .top-wrapper p {
+    font-size: 14px;
+  }
 }
