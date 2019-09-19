@@ -1,3 +1,5 @@
+<!-- 右上のメニューアイコンが消えないのは、CSSの読み込みがfontAwesomeより先に行われているから。ファイル書き出しをすれば直る-->
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -25,18 +27,19 @@
     <div class="container">
       <h1>パンパカパン！( ^ω^ )</h1>
       <br>
-      <h2>たかぽこちんとは？</h2>
-      <div class="btn-wrapper">
+      <h2>たかぽこちんとは？</h2>       
         <img src="https://takatomoyasu.github.io/images/face_icon.jpg" alt="face_ion" class="profile-image">
         <p>↑これがたかぽこちんなのだ！</p>
         <br>
-        <h3>たかぽこちんには何ができるのか！？</h3>        
-        おいしくごはんを食べられる<br>
-        楽しいおしゃべりができる<br>
-        おなかは冷えやすい<br>
-        あとピアノ演奏と調律とプログラミングとかできる<br>        
+        <h3>たかぽこちんに何ができるのか！？</h3>
+        <ul>
+          <li>おいしくごはんを食べられる</li>
+          <li>楽しいおしゃべりができる</li>
+          <li>あとピアノ演奏と調律とプログラミングとか</li>
+        </ul>
       </div>
-              <a href="https://twitter.com/tckr_tckr" class="btn twitter"><span class="fa fa-twitter"></span>Twitterでフレンズになろう( ^ω^ )</a>
+      
+      <a href="https://twitter.com/tckr_tckr" class="btn twitter"><span class="fa fa-twitter"></span>フレンズになろう</a>
     </div>
   </div>
   <div class="lesson-wrapper">
@@ -44,7 +47,7 @@
       <div class="heading">
         <h2>なんかこれまでに作ったもの</h2>
       </div>
-      <div class="lessons">
+      <div class>
         <div class="lesson">
           <div class="lesson-icon">
             <img src="https://takatomoyasu.github.io/images/VRPiano.png">
@@ -71,10 +74,10 @@
             <img src="https://takatomoyasu.github.io/images/Pre-Phone.png">
             <p>Pre-Phone Box</p>
           </div>
-          <p class="txt-contents">公衆電話を使った友人の作品のシステムを開発。受話器に向かって話した言葉を自分で聞くことができる。発生のフレーズ判定、システムの安定性、省電力などに注意し、iPhoneアプリに書き出して運用した。自分とおしゃべりできる。
+          <p class="txt-contents">公衆電話を使った友人の作品のシステムを開発。受話器に向かって話した言葉を自分で聞くことができる。発声のフレーズ判定、システムの安定性、省電力などに工夫を凝らし、iPhoneアプリに書き出して運用した。自分とおしゃべりできる。
           </p>
         </div>
-        <div class="clear"></div> <!--必要か？-->
+        <div class="clear"></div> <!--iPhoneで見ると上手く動かない-->
       </div>
     </div>
   </div>

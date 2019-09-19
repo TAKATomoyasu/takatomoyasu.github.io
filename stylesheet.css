@@ -28,13 +28,16 @@ a {
 }
 
 .top-wrapper h1 {
-  opacity: 0.7;
+/*   opacity: 0.7; */
   font-size: 45px;
-  letter-spacing: 5px;
+  letter-spacing: 2px;
 }
 
 .top-wrapper p {
   opacity: 0.7;
+}
+.top-wrapper li{
+  list-style:none;
 }
 
 .btn-wrapper {
@@ -226,11 +229,16 @@ footer {
   .heading h2 {
     font-size: 20px;
   }
+  
+/*   lesson-wrapperの大きさを自動で変えるのが上手く行かないので、手動で高さを設定 */
+  .lesson-wrapper {
+  height: 550px;
+  }
 }
 
 
-/* @media(max-width: 670px){ */
-@media screen and (max-width:320px) {  
+@media(max-width: 670px){
+/* @media screen and (max-width:320px) {   */
   .lesson {
     width: 100%;
   }
@@ -244,15 +252,13 @@ footer {
   }
   
   .top-wrapper {
-    text-align: left;
+/*     text-align: left; */
   }
 
-  /* header-rightクラスのdisplayをnoneに指定してください */
   .header-right{
     display:none;
   }
   
-  /* menu-iconクラスのdisplayをblockに指定してください  */
     .menu-icon{
       display:block;
     }
@@ -266,7 +272,20 @@ footer {
     font-size: 24px;
   }
 
-  .top-wrapper p {
+  .top-wrapper h2 {
+    font-size: 24px;
+  }
+  .top-wrapper h3 {
+    font-size: 18px;
+  }
+  .top-wrapper p, li{
     font-size: 14px;
+  }
+  .top-wrapper li{
+    text-align:left;
+  }  
+/*   lesson-wrapperの大きさを自動で変えるのが上手く行かないので、手動で高さを設定 */
+  .lesson-wrapper {
+  height: 1600px;
   }
 }
