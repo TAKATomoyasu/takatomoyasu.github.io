@@ -81,17 +81,18 @@ a {
 .profile-image{
   border-radius:100%;  
    border: 3px solid #ccc;
+  display:none;
 }
 
 header {
   height: 65px;
   width: 100%;
-  background-color: rgba(34, 49, 52, 0.9);
-  /* positionƒvƒƒpƒeƒB‚ğfixed‚ÉAtop‚ğ0‚Éw’è‚µ‚Ä‚­‚¾‚³‚¢ */
+  background-color: rgba(26,105,173,0.9);
+  /* positionãƒ—ãƒ­ãƒ‘ãƒ†ã‚£ã‚’fixedã«ã€topã‚’0ã«æŒ‡å®šã—ã¦ãã ã•ã„ */
   position:fixed;
   top: 0px;
   
-  /* z-index‚ğ10‚Éw’è‚µ‚Ä‚­‚¾‚³‚¢ */
+  /* z-indexã‚’10ã«æŒ‡å®šã—ã¦ãã ã•ã„ */
   z-index:10;
 }
 
@@ -230,7 +231,7 @@ footer {
     font-size: 20px;
   }
   
-/*   lesson-wrapper‚Ì‘å‚«‚³‚ğ©“®‚Å•Ï‚¦‚é‚Ì‚ªãè‚­s‚©‚È‚¢‚Ì‚ÅAè“®‚Å‚‚³‚ğİ’è */
+/*   lesson-wrapperã®å¤§ãã•ã‚’è‡ªå‹•ã§å¤‰ãˆã‚‹ã®ãŒä¸Šæ‰‹ãè¡Œã‹ãªã„ã®ã§ã€æ‰‹å‹•ã§é«˜ã•ã‚’è¨­å®š */
   .lesson-wrapper {
   height: 550px;
   }
@@ -287,7 +288,7 @@ footer {
   .top-wrapper li{
     text-align:left;
   }  
-/*   lesson-wrapper‚Ì‘å‚«‚³‚ğ©“®‚Å•Ï‚¦‚é‚Ì‚ªãè‚­s‚©‚È‚¢‚Ì‚ÅAè“®‚Å‚‚³‚ğİ’è */
+/*   lesson-wrapperã®å¤§ãã•ã‚’è‡ªå‹•ã§å¤‰ãˆã‚‹ã®ãŒä¸Šæ‰‹ãè¡Œã‹ãªã„ã®ã§ã€æ‰‹å‹•ã§é«˜ã•ã‚’è¨­å®š */
   .lesson-wrapper {
   height: 1600px;
   }
