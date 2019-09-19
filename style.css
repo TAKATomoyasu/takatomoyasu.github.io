@@ -1,3 +1,7 @@
+*{ 
+    box-sizing: border-box;
+} 
+
 body {
   margin: 0;
 /*   font-family: "Hiragino Kaku Gothic ProN"; */
@@ -9,7 +13,7 @@ a {
 }
 
 .container {
-  width: 1170px;
+  width: 100%;
   padding: 0 15px;
   margin: 0 auto;
 }
@@ -69,6 +73,7 @@ a {
 .fa {
   margin-right: 5px;
 }
+
 .profile-image{
   border-radius:100%;  
    border: 3px solid #ccc;
@@ -187,4 +192,31 @@ footer p {
 
 footer {
   padding-top: 30px;
+}
+
+
+@media(max-width: 1000px){
+  .lesson {
+    float: left;
+    width: 50%;
+  }
+}
+
+
+@media(max-width: 640px){
+
+  .btn {
+    width:100%;
+  }
+  .lesson {
+    float: left;
+    width: 100%;
+}
+  .top-wrapper h1{
+/*     font-size:24px; */
+  }
+  .top-wrapper h2{
+/*     font-size:14px; */
+  }
+  
 }
