@@ -290,6 +290,6 @@ footer {
   }  
 /*   lesson-wrapperの大きさを自動で変えるのが上手く行かないので、手動で高さを設定 */
   .lesson-wrapper {
-  height: 1600px;
+  height: 1550px;
   }
 }
