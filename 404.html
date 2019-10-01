@@ -1,58 +1,58 @@
 <!-- 右上のメニューアイコンが消えないのは、CodePenでは、CSSの読み込みがfontAwesomeより先に行われているから。ファイル書き出しをすれば直る-->
 
 <!DOCTYPE html>
-<html>
+<h2>
 
-<head>
-    <meta charset="utf-8">
-    <title>ページが見つからないよ(´ •ω•`)</title>
-    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
-    <link href="https://fonts.googleapis.com/css?family=M+PLUS+Rounded+1c:300,400,500,700,800&display=swap&subset=japanese" rel="stylesheet">
-    <link rel="stylesheet" href="stylesheet.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-148577989-1"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
+    <head>
+        <meta charset="utf-8">
+        <title>ページが見つからないよ(´ •ω•`)</title>
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+        <link href="https://fonts.googleapis.com/css?family=M+PLUS+Rounded+1c:300,400,500,700,800&display=swap&subset=japanese" rel="stylesheet">
+        <link rel="stylesheet" href="stylesheet.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-148577989-1"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
 
-        function gtag() {
-            dataLayer.push(arguments);
-        }
-        gtag('js', new Date());
-        gtag('config', 'UA-148577989-1');
-    </script>
-</head>
+            function gtag() {
+                dataLayer.push(arguments);
+            }
+            gtag('js', new Date());
+            gtag('config', 'UA-148577989-1');
+        </script>
+    </head>
 
-<body>
-    <header>
-        <div class="container">
-            <div class="header-left">
-                <img class="logo" src="https://taka-chin.com/images/main_logo.png" id="header-logo">
+    <body>
+        <header>
+            <div class="container">
+                <div class="header-left">
+                    <img class="logo" src="https://taka-chin.com/images/main_logo.png" id="header-logo">
+                </div>
+                <span class="fa fa-bars menu-icon"></span>
+                <div class="header-right">
+                </div>
             </div>
-            <span class="fa fa-bars menu-icon"></span>
-            <div class="header-right">
+        </header>
+
+        <div class="top-wrapper">
+            <div class="container">
+                <h2>このURLは見つからなかったよ(´ •ω•`)ｼｭﾝ…</h2>
+                <br>
+                <br>
+                <a href="index.html">
+                    <h3>トップページへ戻ろうよ</h3>
+                </a>
             </div>
         </div>
-    </header>
+        <footer>
+            <div class="container">
+                <img src="https://taka-chin.com/images/footer_logo.png">
+                <p>© TAKA Tomoyasu 2019</p>
+            </div>
 
-    <div class="top-wrapper">
-        <div class="container">
-            <h2>このURLは見つからなかったよ(´ •ω•`)ｼｭﾝ…</h2>
-            <br>
-            <br>
-            <a href="index.html">
-                <h3>トップページへ戻ろうよ</h3>
-            </a>
-        </div>
-    </div>
-    <footer>
-        <div class="container">
-            <img src="https://taka-chin.com/images/footer_logo.png">
-            <p>© TAKA Tomoyasu 2019</p>
-        </div>
+        </footer>
+        <script src="./script.js"></script>
+    </body>
 
-    </footer>
-    <script src="./script.js"></script>
-</body>
-
-</html>
+</h2>
