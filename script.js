@@ -65,20 +65,50 @@ $(function() {
                 left: mX +
                     mouseList[i].ofsX +
                     mouseList[i].ofsXMul *
-                    Math.cos((mouseList[i].ofsAngle + mY) * (Math.PI / 180)) *
+                    Math.cos((mouseList[i].ofsAngle + mY + window.pageYOffset) * (Math.PI / 180)) *
                     30,
                 top: mY +
                     mouseList[i].ofsY +
                     mouseList[i].ofsYMul *
-                    Math.sin((mouseList[i].ofsAngle + mX) * (Math.PI / 180)) *
+                    Math.sin((mouseList[i].ofsAngle + mX + window.pageYOffset) * (Math.PI / 180)) *
                     30
             });
         }
-
-        //座標を表示する
-        document.getElementById("txtX").value = mX;
-        document.getElementById("txtY").value = mY;
     });
+
+    // スクロール時にも移動しようと思ったけど、上手くできなかった(´>ω<`)
+    // //マウス移動時のイベントをBODYタグに登録する
+    // document.addEventListener("scroll", function(e) {
+    //     //座標を取得する
+    //     var mX; //X座標
+    //     var mY; //Y座標
+    //     document.onmousemove = function(m) {
+    //         // マルチブラウザ対応のため、引数eventが指定されないブラウザは、
+    //         // グローバルなeventオブジェクトを利用する。
+    //         if (m) {
+    //             mX = m.pageX;
+    //             mY = m.pageY;
+    //         } else {
+    //             mX = event.pageX;
+    //             mY = event.pageY;
+    //         }
+    //     }
+    //     for (var i = 0; i < mouseList.length; i++) {
+    //         $("." + mouseList[i].name).css({
+    //             left: mX +
+    //                 mouseList[i].ofsX +
+    //                 mouseList[i].ofsXMul *
+    //                 Math.cos((mouseList[i].ofsAngle + mY + window.pageYOffset) * (Math.PI / 180)) *
+    //                 30,
+    //             top: mY +
+    //                 mouseList[i].ofsY +
+    //                 mouseList[i].ofsYMul *
+    //                 Math.sin((mouseList[i].ofsAngle + mX + window.pageYOffset) * (Math.PI / 180)) *
+    //                 30
+    //         });
+    //     }
+    // });
+
 
     // サブマウスの個数
     var counter = 0;

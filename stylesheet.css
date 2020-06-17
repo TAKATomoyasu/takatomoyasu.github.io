@@ -62,6 +62,7 @@ a {
 
 .twitter {
     background-color: #55acee;
+    transform: rotate(-3deg);
 }
 
 .btn {
@@ -215,6 +216,7 @@ footer p {
 
 .mouse {
     position: absolute;
+    pointer-events: none;
 }
 
 
