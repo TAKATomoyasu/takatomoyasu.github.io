@@ -1,0 +1,126 @@
+<!-- 右上のメニューアイコンが消えないのは、CodePenでは、CSSの読み込みがfontAwesomeより先に行われているから。ファイル書き出しをすれば直る-->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Taka-chinむおお( っ ‘ᾥ’ )っ</title>
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=M+PLUS+Rounded+1c:300,400,500,700,800&display=swap&subset=japanese" rel="stylesheet">
+    <link rel="stylesheet" href="stylesheet.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-148577989-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-148577989-1');
+    </script>
+
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <div class="header-left">
+                <img class="logo" src="https://taka-chin.com/images/main_logo.png" id="header-logo">
+            </div>
+            <span class="fa fa-bars menu-icon"></span>
+            <div class="header-right">
+                <!-- ↓あとで何かの機能で追加しよう-->
+                <!--         <a href="#" class="login">ログイン</a> -->
+            </div>
+        </div>
+    </header>
+
+    <div class="top-wrapper">
+        <div class="container">
+            <div style="color:red; font-size:16px;">クリックするたびマウスが増えるキャンペーン中！<br> どこでもいいからクリックしてみよう
+            </div>
+            <h1 id="top-copy">パンパカパン！( ^ω^ )</h1>
+            <br>
+            <h1>たかぽこちんとは？</h1>
+
+            <img src="https://taka-chin.com/images/face_icon.jpg" class="profile-image">
+            <p>↑これがたかぽこちんなのだ！</p>
+            <br>
+            <h3>たかぽこちんに何ができるのか！？</h3>
+            <ul>
+                <li>よく噛んでからごはんを食べる</li>
+                <li>楽しいおしゃべりをする</li>
+                <li>ピアノを演奏・調律する</li>
+                <li>コンプーターでプログラミング</li>
+            </ul>
+        </div>
+        <a href="https://twitter.com/tckr_tckr" class="btn twitter"><span
+                class="fa fa-twitter"></span>Twitterでフレンズになろう</a>
+    </div>
+    </div>
+    <div class="lesson-wrapper">
+        <div class="container">
+            <div class="heading">
+                <h2>なんかこれまでに作ったもの</h2>
+            </div>
+            <div class>
+                <div class="lesson">
+                    <div class="lesson-icon">
+                        <img src="https://taka-chin.com/images/VRPiano.png">
+                        <p>VR Piano<br> Visualizer</p>
+                    </div>
+                    <p class="txt-contents">体験者の演奏した音がVR空間内で映像化する作品。体験すると楽しい。</p>
+                </div>
+                <div class="lesson">
+                    <div class="lesson-icon">
+                        <img src="https://taka-chin.com/images/Attraction.png">
+                        <p>音楽の<br>アトラクション</p>
+                    </div>
+                    <p class="txt-contents">クラシック音楽の演奏に連動して生成される映像作品。サロンコンサートの映像演出として制作した。見ると楽しい。</p>
+                </div>
+                <div class="lesson">
+                    <div class="lesson-icon">
+                        <img src="https://taka-chin.com/images/Phonecatch.png">
+                        <p>あらぶり☆<br>スマホキャッチ</p>
+                    </div>
+                    <p class="txt-contents">
+                        1weekゲームジャム大会にて「ギリギリ」というテーマで制作したPC用ゲーム作品。手から滑り落ちるスマホを落とさないようキャッチするゲーム。遊ぶと楽しい。</p>
+                </div>
+                <div class="lesson">
+                    <div class="lesson-icon">
+                        <img src="https://taka-chin.com/images/Pre-Phone.png">
+                        <p>Pre-Phone Box</p>
+                    </div>
+                    <p class="txt-contents">
+                        公衆電話を使った友人の作品のシステムを開発。受話器に向かって話した言葉を自分で聞くことができる。発声のフレーズ判定、システムの安定性、省電力などに工夫を凝らし、iPhoneアプリに書き出して運用した。自分とおしゃべりできる。
+                    </p>
+                </div>
+                <div class="clear"></div>
+                <!--iPhoneで見ると上手く動かない-->
+            </div>
+        </div>
+    </div>
+    <div class="message-wrapper">
+        <div class="container">
+            <div class="heading">
+                <h2>さぁ、あなたもたかぽこちんと仲良く遊ぼうぞ！</h2>
+            </div>
+            <span class="btn message">さっそく遊ぶ</span>
+        </div>
+    </div>
+    <footer>
+        <div class="container">
+            <img src="https://taka-chin.com/images/footer_logo.png">
+            <p>© TAKA Tomoyasu 2019</p>
+        </div>
+
+    </footer>
+    <script src="./script.js"></script>
+</body>
+
+</html>
