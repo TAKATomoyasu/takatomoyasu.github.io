@@ -237,9 +237,9 @@ footer p {
         font-size: 20px;
     }
     /*   lesson-wrapperの大きさを自動で変えるのが上手く行かないので、手動で高さを設定 */
-    .lesson-wrapper {
-        height: 550px;
-    }
+    /* .lesson-wrapper { */
+    /* height: 550px; */
+    /* } */
 }
 
 @media (max-width: 670px) {
@@ -285,7 +285,7 @@ footer p {
         text-align: left;
     }
     /*   lesson-wrapperの大きさを自動で変えるのが上手く行かないので、手動で高さを設定 */
-    .lesson-wrapper {
+    /* .lesson-wrapper {
         height: 1550px;
-    }
+    } */
 }
