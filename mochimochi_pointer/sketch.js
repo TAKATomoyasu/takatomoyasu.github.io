@@ -28,8 +28,8 @@ function draw() {
   xpos = mouseX;
   ypos = mouseY;
 
-  x += (xpos - x) / 10.0;
-  y += (ypos - y) / 10.0;
+  x += (xpos - x) / 5.0;
+  y += (ypos - y) / 5.0;
   dx += ((x - px) - dx) / 1.0;
   dy += ((y - py) - dy) / 1.0;
   let dd = abs(dx) + abs(dy);  
