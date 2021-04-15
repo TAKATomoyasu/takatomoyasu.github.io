@@ -1,3 +1,5 @@
+const mochi = 5.0; //from 2 to 10
+
 let x = 0.0,
   y = 0.0,
   px = 0.0,
@@ -28,11 +30,11 @@ function draw() {
   xpos = mouseX;
   ypos = mouseY;
 
-  x += (xpos - x) / 5.0;
-  y += (ypos - y) / 5.0;
+  x += (xpos - x) / mochi;
+  y += (ypos - y) / mochi;
   dx += ((x - px) - dx) / 1.0;
   dy += ((y - py) - dy) / 1.0;
-  let dd = abs(dx) + abs(dy);  
+  let dd = abs(dx) + abs(dy);
   d += (dd - d) / 2.0;
 
   if (d > 0) angle = atan2(dy, dx);
@@ -55,7 +57,7 @@ function draw() {
 
 
 function mousePressed() {
-  
+
   radius *= 0.9;
 }
 function mouseReleased() {
