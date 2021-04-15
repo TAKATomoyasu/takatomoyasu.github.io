@@ -14,9 +14,9 @@ function setup() {
 }
 
 function draw() {
-  background(0);
+  background(255);
   noStroke();
-  fill(255);
+  fill(255,200,200);
 
   x += (mouseX - x) / 5.0;
   y += (mouseY - y) / 5.0;
@@ -43,22 +43,26 @@ function draw() {
 
 
 function mousePressed() {
-  points.push(new PointerClick(mouseX, mouseY, 0));
+  
+  radius *= 0.9;
+}
+function mouseReleased(){
+  points.push(new PointerClick(mouseX, mouseY, 100));
+  radius = 100;
 }
 
 
 class PointerClick {
   
-  click_size = 0;
-
-  constructor(x, y) {
+  constructor(x, y,effect_size) {
     this.x = x;
     this.y = y;
+    this.effect_size = effect_size;
   }
   
   update() {
-    fill(255, 200, 200, 255 - this.click_size);
-    ellipse(this.x, this.y, this.click_size, this.click_size);
-    this.click_size += 10;
+    fill(255, 200, 200, 255 - this.effect_size);
+    ellipse(this.x, this.y, this.effect_size, this.effect_size);
+    this.effect_size += 10;
   }
 }
