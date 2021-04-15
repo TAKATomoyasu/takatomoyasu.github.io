@@ -1,4 +1,5 @@
 @charset "UTF-8";
+
 * {
     box-sizing: border-box;
 }
@@ -6,7 +7,7 @@
 body {
     margin: 0;
     /*   font-family: "Hiragino Kaku Gothic ProN"; */
-    font-family: 'M PLUS Rounded 1c', sans-serif;
+    font-family: sans-serif, 'M PLUS Rounded 1c';
 }
 
 a {
@@ -23,8 +24,8 @@ a {
 .top-wrapper {
     padding: 180px 0 100px 0;
     /*   background-image: url(https://takatomoyasu.github.io/images/VRPianoOriginal.jpg); */
-    background-color: #eee;
-    background-size: cover;
+    /* background-color: #eee;
+    background-size: cover; */
     /*   color: white; */
     text-align: center;
 }
@@ -127,7 +128,7 @@ header .logo {
 .lesson-wrapper {
     height: 500px;
     padding-bottom: 80px;
-    background-color: #f7f7f7;
+    /* background-color: #f7f7f7; */
     text-align: center;
 }
 
@@ -219,6 +220,14 @@ footer p {
     pointer-events: none;
 }
 
+#defaultCanvas0 {
+    position: fixed;
+    /*canvasを固定*/
+    top: 0;
+    /*canvasを上に固定*/
+    z-index: -1;
+}
+
 
 /* @media(max-width: 1000px){ */
 
@@ -227,15 +236,19 @@ footer p {
         width: 50%;
         margin-bottom: 50px;
     }
+
     footer {
         text-align: center;
     }
+
     .top-wrapper h1 {
         font-size: 32px;
     }
+
     .heading h2 {
         font-size: 20px;
     }
+
     /*   lesson-wrapperの大きさを自動で変えるのが上手く行かないので、手動で高さを設定 */
     /* .lesson-wrapper { */
     /* height: 550px; */
@@ -243,47 +256,61 @@ footer p {
 }
 
 @media (max-width: 670px) {
+
     /* @media screen and (max-width:320px) {   */
     .lesson {
         width: 100%;
     }
+
     .btn {
         width: 100%;
     }
+
     .facebook {
         margin-bottom: 10px;
     }
+
     .top-wrapper {
         /*     text-align: left; */
     }
+
     .header-right {
         display: none;
     }
+
     .menu-icon {
         display: block;
     }
+
     .menu-right {
         display: block;
     }
+
     .top-wrapper {
         padding: 100px 0 100px 0;
     }
+
     .top-wrapper h1 {
         font-size: 24px;
     }
+
     .top-wrapper h2 {
         font-size: 24px;
     }
+
     .top-wrapper h3 {
         font-size: 18px;
     }
+
     .top-wrapper p,
     .top-wrapper li {
         font-size: 16px;
     }
+
     .top-wrapper li {
         text-align: left;
     }
+
     /*   lesson-wrapperの大きさを自動で変えるのが上手く行かないので、手動で高さを設定 */
     /* .lesson-wrapper {
         height: 1550px;

@@ -13,6 +13,8 @@
   <link rel="stylesheet" href="stylesheet.css">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+
+
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-148577989-1"></script>
   <script>
@@ -22,26 +24,32 @@
       dataLayer.push(arguments);
     }
     gtag('js', new Date());
-
     gtag('config', 'UA-148577989-1');
   </script>
 
+  <!-- 背景のp5js -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.9.0/p5.js"></script>
+  <script src="./mochimochi_pointer/sketch.js"></script>
+  </script>
 </head>
 
 <body>
+
+  <!-- ヘッダー -->
   <header>
     <div class="container">
       <div class="header-left">
         <img class="logo" src="https://taka-chin.com/images/main_logo.png" id="header-logo">
       </div>
-      <span class="fa fa-bars menu-icon"></span>
+      <!-- <span class="fa fa-bars menu-icon"></span>
       <div class="header-right">
-        <!-- ↓あとで何かの機能で追加しよう-->
-        <!--         <a href="#" class="login">ログイン</a> -->
-      </div>
+        ↓あとで何かの機能で追加しよう
+                <a href="#" class="login">ログイン</a>
+      </div> -->
     </div>
   </header>
 
+  <!-- 上部 -->
   <div class="top-wrapper">
     <div class="container">
       <div style="color:red; font-size:16px;"> クリックするたびマウスが増えるキャンペーン中！<br> どこでもいいからクリックしてみよう </div>
@@ -72,6 +80,7 @@
   </div>
 
 
+  <!-- 中部 -->
   </div>
   <div class="lesson-wrapper">
     <div class="container">
@@ -124,13 +133,19 @@
             <span class="btn message">さっそく遊ぶ</span>
         </div>
     </div> -->
+
+  <!-- フッター -->
   <footer>
     <div class="container">
-      <img src="https://taka-chin.com/images/footer_logo.png">
-      <p>© TAKA Tomoyasu 2019</p>
+      <div class="container">
+        <!-- <img src="https://taka-chin.com/images/footer_logo.png"> -->
+        <p style="text-align: center;">© TAKA Tomoyasu 2021</p>
+      </div>
     </div>
-
   </footer>
+
+
+
   <script src="./script.js"></script>
 </body>
 
