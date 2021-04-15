@@ -4,8 +4,11 @@ let x = 0.0,
   py = 0.0,
   dx = 0.0,
   dy = 0.0,
-  angle = 0.0;
-let radius = 100;
+  angle = 0.0,
+  radius = 100,
+  d = 0.0,
+  xpos = 0.0,
+  ypos = 0.0;
 
 const points = [];
 
@@ -22,11 +25,16 @@ function draw() {
   noStroke();
   fill(255, 200, 200);
 
-  x += (mouseX - x) / 5.0;
-  y += (mouseY - y) / 5.0;
-  dx += ((x - px) - dx) / 2.0;
-  dy += ((y - py) - dy) / 2.0;
-  let d = abs(dx) + abs(dy);
+  xpos = mouseX;
+  ypos = mouseY;
+
+  x += (xpos - x) / 10.0;
+  y += (ypos - y) / 10.0;
+  dx += ((x - px) - dx) / 1.0;
+  dy += ((y - py) - dy) / 1.0;
+  let dd = abs(dx) + abs(dy);  
+  d += (dd - d) / 2.0;
+
   if (d > 0) angle = atan2(dy, dx);
 
   px = x;
@@ -35,7 +43,7 @@ function draw() {
   push();
   translate(x, y);
   rotate(angle);
-  ellipse(0, 0, radius, max(10, radius - d / 1.0));
+  ellipse(0, 0, radius + d / 1.0, max(10, radius - d / 1.0));
   pop();
 
 
@@ -47,12 +55,15 @@ function draw() {
 
 
 function mousePressed() {
-
+  
   radius *= 0.9;
 }
 function mouseReleased() {
   points.push(new PointerClick(mouseX, mouseY, 100));
   radius = 100;
+  // クリックしたらランダムな場所へジャンプ
+  // xpos = random(0, width);
+  // ypos = random(0, height);
 }
 
 
