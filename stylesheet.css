@@ -18,7 +18,7 @@ a {
     width: 100%;
     padding: 0 15px;
     margin: 0 auto;
-    transform: rotate(-3deg);
+    /* transform: rotate(-3deg); */
 }
 
 .top-wrapper {
@@ -63,7 +63,7 @@ a {
 
 .twitter {
     background-color: #55acee;
-    transform: rotate(-3deg);
+    /* transform: rotate(-3deg); */
 }
 
 .btn {
