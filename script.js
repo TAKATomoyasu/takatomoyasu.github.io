@@ -27,24 +27,24 @@ $(function () {
         }
     );
     //profile-imageの切り替え
-    $(".profile-image").hover(
-        function () {
-            $(this).attr(
-                "src",
-                $(this)
-                    .attr("src")
-                    .replace("icon", "icon-shock")
-            );
-        },
-        function () {
-            $(this).attr(
-                "src",
-                $(this)
-                    .attr("src")
-                    .replace("icon-shock", "icon")
-            );
-        }
-    );
+    // $(".profile-image").hover(
+    //     function () {
+    //         $(this).attr(
+    //             "src",
+    //             $(this)
+    //                 .attr("src")
+    //                 .replace("icon", "icon-shock")
+    //         );
+    //     },
+    //     function () {
+    //         $(this).attr(
+    //             "src",
+    //             $(this)
+    //                 .attr("src")
+    //                 .replace("icon-shock", "icon")
+    //         );
+    //     }
+    // );
     $("#top-copy").hover(
         function () {
             $(this).text("ぽんぽこぽん！(´>ω<`)");
