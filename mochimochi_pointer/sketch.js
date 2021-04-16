@@ -5,7 +5,7 @@ const samples = [];
 
 function preload() {
   for (let i = 0; i < 7; i++) {
-    samples.push(loadSound('mochimochi_pointer/sound/vibraphone-' + i + '.mp3'));
+    samples.push(loadSound('vibraphone-' + i + '.mp3'));
   }
 }
 
@@ -30,7 +30,7 @@ function draw() {
   // クリックエフェクト
   for (let i = 0; i < effects.length; i++) {
     effects[i].update();
-    if (effects[i].effect_size > 300) {
+    if (effects[i].radius > 300) {
       effects.splice(i, 1);
       if (effects.length > 0) i--;
     }
