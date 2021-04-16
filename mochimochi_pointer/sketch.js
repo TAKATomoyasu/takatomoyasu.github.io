@@ -20,7 +20,7 @@ function windowResized() {
 }
 function setup() {
   canvas = createCanvas(windowWidth, windowHeight);
-  fftSetup();
+  // fftSetup();
 
 }
 
@@ -55,7 +55,7 @@ function draw() {
   for (let i = 0; i < points.length; i++) {
     points[i].update();
   }
-  fftDraw();
+  // fftDraw();
 
 }
 
@@ -95,6 +95,7 @@ class PointerClick {
 let mic, fft;
 function fftSetup() {
   mic = new p5.AudioIn();
+
   mic.start();
   fft = new p5.FFT();
   fft.setInput(mic);
