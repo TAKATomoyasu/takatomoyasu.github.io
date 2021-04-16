@@ -20,6 +20,8 @@ function windowResized() {
 }
 function setup() {
   canvas = createCanvas(windowWidth, windowHeight);
+  fftSetup();
+
 }
 
 function draw() {
@@ -53,6 +55,8 @@ function draw() {
   for (let i = 0; i < points.length; i++) {
     points[i].update();
   }
+  fftDraw();
+
 }
 
 
@@ -82,4 +86,28 @@ class PointerClick {
     ellipse(this.x, this.y, this.effect_size, this.effect_size);
     this.effect_size += 10;
   }
+}
+
+
+
+
+
+let mic, fft;
+function fftSetup() {
+  mic = new p5.AudioIn();
+  mic.start();
+  fft = new p5.FFT();
+  fft.setInput(mic);
+}
+
+function fftDraw() {
+  noFill();
+  stroke(255, 200, 200);
+  let spectrum = fft.analyze();
+
+  beginShape();
+  for (i = 0; i < spectrum.length; i++) {
+    vertex(map(i, 0, spectrum.length, 0, width), map(spectrum[i], 0, 255, height, 0));
+  }
+  endShape();
 }
