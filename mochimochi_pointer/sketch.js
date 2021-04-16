@@ -1,16 +1,13 @@
-const mochi = 5.0; //from 2 to 10
-
+const smooth = 5.0,
+  damp = 0.7;
 let x = 0.0,
   y = 0.0,
-  px = 0.0,
-  py = 0.0,
-  dx = 0.0,
-  dy = 0.0,
-  angle = 0.0,
-  radius = 100,
-  d = 0.0,
+  vx = 0.0,
+  vy = 0.0,
+  radius = 100.0,
   xpos = 0.0,
   ypos = 0.0;
+
 
 const points = [];
 
@@ -18,6 +15,7 @@ function windowResized() {
   resizeCanvas(windowWidth, windowHeight);
   canvasSetup;
 }
+
 function setup() {
   canvas = createCanvas(windowWidth, windowHeight);
   // fftSetup();
@@ -32,28 +30,32 @@ function draw() {
   xpos = mouseX;
   ypos = mouseY;
 
-  x += (xpos - x) / mochi;
-  y += (ypos - y) / mochi;
-  dx += ((x - px) - dx) / 1.0;
-  dy += ((y - py) - dy) / 1.0;
-  let dd = abs(dx) + abs(dy);
-  d += (dd - d) / 2.0;
+  vx += (xpos - x) / smooth;
+  vy += (ypos - y) / smooth;
+  vx *= damp;
+  vy *= damp;
 
-  if (d > 0) angle = atan2(dy, dx);
+  x += vx;
+  y += vy;
+  x += (xpos - x) / 20.0;
+  y += (ypos - y) / 20.0;
 
-  px = x;
-  py = y;
-
+  let d = abs(vx) + abs(vy);
+  // d*=2.0;
+  let angle = atan2(vy, vx);
   push();
   translate(x, y);
+
   rotate(angle);
-  ellipse(0, 0, radius + d / 1.0, max(10, radius - d / 1.0));
+  ellipse(0, 0, radius + d, max(10, radius - d));
   pop();
+
 
 
   // クリックエフェクト
   for (let i = 0; i < points.length; i++) {
     points[i].update();
+    if (points[i].effect_size > 300) print("1");
   }
   // fftDraw();
 
@@ -61,9 +63,9 @@ function draw() {
 
 
 function mousePressed() {
-
   radius *= 0.9;
 }
+
 function mouseReleased() {
   points.push(new PointerClick(mouseX, mouseY, 100));
   radius = 100;
@@ -93,6 +95,7 @@ class PointerClick {
 
 
 let mic, fft;
+
 function fftSetup() {
   mic = new p5.AudioIn();
 

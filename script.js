@@ -1,6 +1,6 @@
 // 全部の要素がマウスホバーで変わるとか楽しくない？
 // マウスホバーで透明になっちゃうとか
-$(function() {
+$(function () {
     $(".profile-image").fadeIn("slow");
     $(".message").click(() => {
         // $('.message').fadeOut();
@@ -9,53 +9,53 @@ $(function() {
 
     //ヘッダーロゴの切り替え
     $("#header-logo").hover(
-        function() {
+        function () {
             $(this).attr(
                 "src",
                 $(this)
-                .attr("src")
-                .replace("logo", "logo-jap")
+                    .attr("src")
+                    .replace("logo", "logo-jap")
             );
         },
-        function() {
+        function () {
             $(this).attr(
                 "src",
                 $(this)
-                .attr("src")
-                .replace("logo-jap", "logo")
+                    .attr("src")
+                    .replace("logo-jap", "logo")
             );
         }
     );
     //profile-imageの切り替え
     $(".profile-image").hover(
-        function() {
+        function () {
             $(this).attr(
                 "src",
                 $(this)
-                .attr("src")
-                .replace("icon", "icon-shock")
+                    .attr("src")
+                    .replace("icon", "icon-shock")
             );
         },
-        function() {
+        function () {
             $(this).attr(
                 "src",
                 $(this)
-                .attr("src")
-                .replace("icon-shock", "icon")
+                    .attr("src")
+                    .replace("icon-shock", "icon")
             );
         }
     );
     $("#top-copy").hover(
-        function() {
+        function () {
             $(this).text("ぽんぽこぽん！(´>ω<`)");
         },
-        function() {
+        function () {
             $(this).text("パンパカパン！( ^ω^ )");
         }
     );
 
     //マウス移動時のイベントをBODYタグに登録する
-    document.body.addEventListener("mousemove", function(e) {
+    document.body.addEventListener("mousemove", function (e) {
         //座標を取得する
         var mX = e.pageX; //X座標
         var mY = e.pageY; //Y座標
@@ -114,32 +114,37 @@ $(function() {
     var counter = 0;
     var mouseList = [];
 
-    // クリック時に、imgタグを追加し、マウスの情報を記録するオブジェクトを生成＆配列に入れる
-    document.body.onclick = function() {
-        counter++;
-        //   タグをhtmlに追加
-        $("body").append(
-            '<img srcset="https://taka-chin.com/images/cursor.png 2.5x" class="mouse m' +
-            counter +
-            '"></img>'
-        );
-        // console.log(
-        //   '<img srcset="https://taka-chin.com/images/cursor.png 2.5x" class="mouse m' +
-        //     counter +
-        //     '"></img>'
-        // );
 
-        //マウスの名前や値を格納するオブジェクトを配列で管理する
-        mouseList.push({
-            name: "m" + counter,
-            ofsX: Math.random() * 60 - 30,
-            ofsY: Math.random() * 60 - 30,
-            amp: 30,
-            //ofsXのsinを足すか引くかを決定。1 - 2 * 0|2という形で、-1 / +1 を作りそれを掛け算する
-            ofsXMul: 1 - 2 * Math.floor(Math.random() * 2),
-            ofsYMul: 1 - 2 * Math.floor(Math.random() * 2),
-            ofsAngle: Math.random() * 360
-        });
-        // console.log(mouseList);
-    };
+
+
+    // ダミーマウスやるなら、ここのコメントアウトを解除
+    //
+    // // クリック時に、imgタグを追加し、マウスの情報を記録するオブジェクトを生成＆配列に入れる
+    // document.body.onclick = function() {
+    //     counter++;
+    //     //   タグをhtmlに追加
+    //     $("body").append(
+    //         '<img srcset="https://taka-chin.com/images/cursor.png 2.5x" class="mouse m' +
+    //         counter +
+    //         '"></img>'
+    //     );
+    //     // console.log(
+    //     //   '<img srcset="https://taka-chin.com/images/cursor.png 2.5x" class="mouse m' +
+    //     //     counter +
+    //     //     '"></img>'
+    //     // );
+
+    //     //マウスの名前や値を格納するオブジェクトを配列で管理する
+    //     mouseList.push({
+    //         name: "m" + counter,
+    //         ofsX: Math.random() * 60 - 30,
+    //         ofsY: Math.random() * 60 - 30,
+    //         amp: 30,
+    //         //ofsXのsinを足すか引くかを決定。1 - 2 * 0|2という形で、-1 / +1 を作りそれを掛け算する
+    //         ofsXMul: 1 - 2 * Math.floor(Math.random() * 2),
+    //         ofsYMul: 1 - 2 * Math.floor(Math.random() * 2),
+    //         ofsAngle: Math.random() * 360
+    //     });
+    //     // console.log(mouseList);
+    // };
 });
