@@ -1,5 +1,13 @@
 const pointers = [];
-const points = [];
+const effects = [];
+const samples = [];
+
+
+function preload() {
+  for (let i = 0; i < 7; i++) {
+    samples.push(loadSound('mochimochi_pointer/sound/vibraphone-' + i + '.mp3'));
+  }
+}
 
 function windowResized() {
   resizeCanvas(windowWidth, windowHeight);
@@ -14,16 +22,17 @@ function setup() {
   // fftSetup();
 }
 
+
 function draw() {
   background(255);
   noStroke();
 
   // クリックエフェクト
-  for (let i = 0; i < points.length; i++) {
-    points[i].update();
-    if (points[i].effect_size > 300) {
-      points.splice(i, 1);
-      if (points.length > 0) i--;
+  for (let i = 0; i < effects.length; i++) {
+    effects[i].update();
+    if (effects[i].effect_size > 300) {
+      effects.splice(i, 1);
+      if (effects.length > 0) i--;
     }
   }
 
@@ -35,12 +44,22 @@ function draw() {
 }
 
 
+let lastNote = -1;
+let r = -1;
 function mousePressed() {
   // radius *= 0.9;
+
+  while (r == lastNote) {
+    r = Math.floor(Math.random() * 7);
+  }
+
+  samples[r].play();
+  print(r, samples.length);
+  lastNote = r;
 }
 
 function mouseReleased() {
-  points.push(new clickEffect(mouseX, mouseY, 100));
+  effects.push(new clickEffect(mouseX, mouseY, 100));
   // radius = 100;
   // クリックしたらランダムな場所へジャンプ
   // xpos = random(0, width);
