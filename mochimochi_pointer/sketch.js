@@ -1,14 +1,4 @@
-const smooth = 5.0,
-  damp = 0.7;
-let x = 0.0,
-  y = 0.0,
-  vx = 0.0,
-  vy = 0.0,
-  radius = 100.0,
-  xpos = 0.0,
-  ypos = 0.0;
-
-
+const pointers = [];
 const points = [];
 
 function windowResized() {
@@ -18,75 +8,101 @@ function windowResized() {
 
 function setup() {
   canvas = createCanvas(windowWidth, windowHeight);
+  pointers.push(new pointer(color(255, 200, 200), 100.0, 5.0, 0.7));
+  pointers.push(new pointer(color(255, 230, 230), 80.0, 5.0, 0.73));
+  pointers.push(new pointer(color(255, 200, 200), 60.0, 5.0, 0.75));
   // fftSetup();
-
 }
 
 function draw() {
   background(255);
   noStroke();
-  fill(255, 200, 200);
-
-  xpos = mouseX;
-  ypos = mouseY;
-
-  vx += (xpos - x) / smooth;
-  vy += (ypos - y) / smooth;
-  vx *= damp;
-  vy *= damp;
-
-  x += vx;
-  y += vy;
-  x += (xpos - x) / 20.0;
-  y += (ypos - y) / 20.0;
-
-  let d = abs(vx) + abs(vy);
-  // d*=2.0;
-  let angle = atan2(vy, vx);
-  push();
-  translate(x, y);
-
-  rotate(angle);
-  ellipse(0, 0, radius + d, max(10, radius - d));
-  pop();
-
-
 
   // クリックエフェクト
   for (let i = 0; i < points.length; i++) {
     points[i].update();
-    if (points[i].effect_size > 300) print("1");
+    if (points[i].effect_size > 300) {
+      points.splice(i, 1);
+      if (points.length > 0) i--;
+    }
+  }
+
+  // もちもちupdate
+  for (let i = 0; i < pointers.length; i++) {
+    pointers[i].update();
   }
   // fftDraw();
-
 }
 
 
 function mousePressed() {
-  radius *= 0.9;
+  // radius *= 0.9;
 }
 
 function mouseReleased() {
-  points.push(new PointerClick(mouseX, mouseY, 100));
-  radius = 100;
+  points.push(new clickEffect(mouseX, mouseY, 100));
+  // radius = 100;
   // クリックしたらランダムな場所へジャンプ
   // xpos = random(0, width);
   // ypos = random(0, height);
 }
 
 
-class PointerClick {
 
-  constructor(x, y, effect_size) {
-    this.x = x;
-    this.y = y;
-    this.effect_size = effect_size;
+// ここから色々なクラス
+
+class pointer {
+  constructor(c, r, s, d) {
+    this.color = c;
+    this.smooth = s;
+    this.damp = d;
+    this.radius = r;
+    this.x = 0.0;
+    this.y = 0.0;
+    this.vx = 0.0;
+    this.vy = 0.0;
+    this.xpos = 0.0;
+    this.ypos = 0.0;
   }
 
   update() {
-    fill(255, 200, 200, 255 - this.effect_size);
-    ellipse(this.x, this.y, this.effect_size, this.effect_size);
-    this.effect_size += 10;
+    fill(this.color);
+    this.xpos = mouseX;
+    this.ypos = mouseY;
+
+    this.vx += (this.xpos - this.x) / this.smooth;
+    this.vy += (this.ypos - this.y) / this.smooth;
+    this.vx *= this.damp;
+    this.vy *= this.damp;
+
+    this.x += this.vx;
+    this.y += this.vy;
+    this.x += (this.xpos - this.x) / 20.0;
+    this.y += (this.ypos - this.y) / 20.0;
+
+    let d = abs(this.vx) + abs(this.vy);
+    // d*=2.0;
+    let angle = atan2(this.vy, this.vx);
+    push();
+    translate(this.x, this.y);
+
+    rotate(angle);
+    ellipse(0, 0, this.radius + d, max(10, this.radius - d));
+    pop();
+  }
+}
+
+class clickEffect {
+  constructor(x, y, radius) {
+    this.x = x;
+    this.y = y;
+    this.radius = radius;
+  }
+
+  update() {
+    fill(255, 200, 200, 255 - this.radius);
+    ellipse(this.x, this.y, this.radius, this.radius);
+    this.radius += 10;
   }
 }
 
