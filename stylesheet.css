@@ -8,7 +8,7 @@ body {
     margin: 0;
     /*   font-family: "Hiragino Kaku Gothic ProN"; */
     font-family: sans-serif, 'M PLUS Rounded 1c';
-    /* cursor: none; */
+    cursor: none;
 }
 
 a {
