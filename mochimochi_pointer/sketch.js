@@ -20,6 +20,7 @@ function setup() {
   pointers.push(new pointer(color(255, 230, 230), 80.0, 5.0, 0.73));
   pointers.push(new pointer(color(255, 200, 200), 60.0, 5.0, 0.75));
   // fftSetup();
+  noCusor();
 }
 
 
