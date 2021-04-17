@@ -5,7 +5,7 @@ const samples = [];
 
 function preload() {
   for (let i = 0; i < 7; i++) {
-    samples.push(loadSound('./mochimochi_pointer/sound/vibraphone-' + i + '.mp3'));
+    samples.push(loadSound('http://taka-chin.com/mochimochi_pointer/sound/vibraphone-' + i + '.mp3'));
   }
 }
 
