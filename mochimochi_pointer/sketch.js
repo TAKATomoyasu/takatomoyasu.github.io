@@ -5,7 +5,7 @@ const samples = [];
 
 function preload() {
   for (let i = 0; i < 7; i++) {
-    samples.push(loadSound('http://taka-chin.com/mochimochi_pointer/sound/vibraphone-' + i + '.mp3'));
+    // samples.push(loadSound('http://taka-chin.com/mochimochi_pointer/sound/vibraphone-' + i + '.mp3'));
   }
 }
 
@@ -59,7 +59,7 @@ function mousePressed() {
     r = Math.floor(Math.random() * 7);
   }
 
-  samples[r].play();
+  // samples[r].play();
   print(r, samples.length);
   lastNote = r;
 }
