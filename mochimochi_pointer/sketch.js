@@ -5,7 +5,7 @@ const samples = [];
 
 function preload() {
   for (let i = 0; i < 7; i++) {
-    // samples.push(loadSound('http://taka-chin.com/mochimochi_pointer/sound/vibraphone-' + i + '.mp3'));
+    samples.push(loadSound('http://taka-chin.com/mochimochi_pointer/sound/vibraphone-' + i + '.mp3'));
   }
 }
 
@@ -16,15 +16,18 @@ function windowResized() {
 
 function setup() {
   canvas = createCanvas(windowWidth, windowHeight);
-  pointers.push(new pointer(color(255, 200, 200), 100.0, 5.0, 0.7));
-  pointers.push(new pointer(color(255, 230, 230), 80.0, 5.0, 0.73));
-  pointers.push(new pointer(color(255, 200, 200), 60.0, 5.0, 0.75));
+
+  const smooth = 0.7;
+  pointers.push(new pointer(color(255, 200, 200,200), 100.0, 5.0, smooth));
+  pointers.push(new pointer(color(255, 230, 230,200), 80.0, 5.0, smooth + 0.02));
+  pointers.push(new pointer(color(255, 200, 200,200), 60.0, 5.0, smooth + 0.05));
   // fftSetup();
 }
 
 
 function draw() {
-  background(255);
+  // background(255);
+  clear();
   noStroke();
 
   // クリックエフェクト
@@ -37,9 +40,9 @@ function draw() {
   }
 
   // もちもちupdate
-  for (let i = 0; i < pointers.length; i++) {
-    pointers[i].update();
-  }
+  pointers.forEach(e => {
+    e.update();
+  });
   // fftDraw();
 }
 
@@ -47,19 +50,25 @@ function draw() {
 let lastNote = -1;
 let r = -1;
 function mousePressed() {
-  // radius *= 0.9;
+  pointers.forEach(element => {
+    element.radius -= 10;
+  });
+  effects.push(new clickEffect(mouseX, mouseY, 100));
 
   while (r == lastNote) {
     r = Math.floor(Math.random() * 7);
   }
 
-  // samples[r].play();
+  samples[r].play();
   print(r, samples.length);
   lastNote = r;
 }
 
 function mouseReleased() {
-  effects.push(new clickEffect(mouseX, mouseY, 100));
+  pointers.forEach(element => {
+    element.radius += 10;
+  });
+
   // radius = 100;
   // クリックしたらランダムな場所へジャンプ
   // xpos = random(0, width);
