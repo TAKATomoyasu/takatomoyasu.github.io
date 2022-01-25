@@ -1,0 +1,88 @@
+<!-- 右上のメニューアイコンが消えないのは、CodePenでは、CSSの読み込みがfontAwesomeより先に行われているから。ファイル書き出しをすれば直る-->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+
+    <title>大爆走！オーディオレーシングサポート</title>
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <link
+        href="https://fonts.googleapis.com/css?family=M+PLUS+Rounded+1c:300,400,500,700,800&display=swap&subset=japanese"
+        rel="stylesheet">
+    <link rel="icon" href="images/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
+    <link rel="stylesheet" href="/stylesheet.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-148577989-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+        gtag('config', 'UA-148577989-1');
+    </script>
+    <script src="./script.js"></script>
+    <style type="text/css">
+        body {
+            cursor: auto;
+        }
+    </style>
+</head>
+
+
+
+<body>
+
+    <!-- ヘッダー -->
+    <header>
+        <div class="container">
+            <div class="header-left">
+                <img class="logo" src="https://taka-chin.com/images/main_logo.png" id="header-logo">
+            </div>
+            <!-- <span class="fa fa-bars menu-icon"></span>
+      <div class="header-right">
+        ↓あとで何かの機能で追加しよう
+                <a href="#" class="login">ログイン</a>
+      </div> -->
+        </div>
+    </header>
+
+    <!-- 上部 -->
+    <div class="top-wrapper">
+        <h2> 大爆走！オーディオレーシングサポート </h2>
+        <p> このゲームは、視覚障害の有無に関わらずプレイ可能なレーシングゲームです。<br>
+            プレイヤーの進むべき方向を示す「ガイドメロディ」を頼りに、レーシングカーを走らせます。</p>
+        <br>
+        <h3> メニュー画面での操作</h3>
+        <p> メニュー画面は長押しで確定、左右スワイプで項目を左右に切り替えできます。</p>
+        <br>
+        <h3> レース画面での操作</h3>
+        <p> 画面を長押しすると加速し、iPhoneを左右に傾けると左右に曲がることができます。<br>
+            左右に動きまわるメロディを追いかけるようにハンドルを切ることで、迷わずコースを走ることができます。 <br>
+            コースを走行しつつ、状況を次々に熱弁するレース実況を聞くことで、周囲の世界を想像しながら１位を目指しましょう。<br>
+        </p>
+    </div>
+
+    <!-- フッター -->
+    <footer>
+        <div class="container">
+            <div class="container">
+                <!-- <img src="https://taka-chin.com/images/footer_logo.png"> -->
+                <p style="text-align: center;">© TAKA Tomoyasu 2021</p>
+            </div>
+        </div>
+    </footer>
+
+
+
+</body>
+
+</html>
