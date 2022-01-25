@@ -1,19 +1,91 @@
-・プライバシーポリシー・
+<!-- 右上のメニューアイコンが消えないのは、CodePenでは、CSSの読み込みがfontAwesomeより先に行われているから。ファイル書き出しをすれば直る-->
 
-[ 利用者情報の取得 ]
+<!DOCTYPE html>
+<html>
 
-本アプリが利用者の個人情報を取得することはありません。
+<head>
+    <meta charset="utf-8">
 
-[ 利用者情報の利用 ]
+    <title>Taka-chinむおお( っ ‘ᾥ’ )っ</title>
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <link
+        href="https://fonts.googleapis.com/css?family=M+PLUS+Rounded+1c:300,400,500,700,800&display=swap&subset=japanese"
+        rel="stylesheet">
+    <link rel="icon" href="images/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
+    <link rel="stylesheet" href="/stylesheet.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
 
-本アプリが利用者の個人情報を利用することはありません。
 
-[ 利用者情報の第三者提供 ]
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-148577989-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
 
-本アプリが利用者の個人情報を第三者へ提供することはありません。
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+        gtag('config', 'UA-148577989-1');
+    </script>
+    <script src="./script.js"></script>
+    <style type="text/css">
+        body {
+            cursor: auto;
+        }
+    </style>
+</head>
 
-[ お問い合わせ ]
 
-何かご不明な点がございましたら下記からお問い合わせください。
 
-https://forms.gle/2Ens9xEzDFXHPkpMA
+<body>
+
+    <!-- ヘッダー -->
+    <header>
+        <div class="container">
+            <div class="header-left">
+                <img class="logo" src="https://taka-chin.com/images/main_logo.png" id="header-logo">
+            </div>
+            <!-- <span class="fa fa-bars menu-icon"></span>
+      <div class="header-right">
+        ↓あとで何かの機能で追加しよう
+                <a href="#" class="login">ログイン</a>
+      </div> -->
+        </div>
+    </header>
+
+    <!-- 上部 -->
+    <div class="top-wrapper">
+        ・プライバシーポリシー・<br>
+        <br>
+        [ 利用者情報の取得 ]<br>
+        本アプリが利用者の個人情報を取得することはありません。<br>
+        <br>
+        [ 利用者情報の利用 ]<br>
+        本アプリが利用者の個人情報を利用することはありません。<br>
+        <br>
+        [ 利用者情報の第三者提供 ]<br>
+        本アプリが利用者の個人情報を第三者へ提供することはありません。<br>
+        <br>
+        [ お問い合わせ ]<br>
+        何かご不明な点がございましたら下記からお問い合わせください。<br>
+        <a href="https://forms.gle/2Ens9xEzDFXHPkpMA">お問合せフォーム</a>
+
+    </div>
+
+    <!-- フッター -->
+    <footer>
+        <div class="container">
+            <div class="container">
+                <!-- <img src="https://taka-chin.com/images/footer_logo.png"> -->
+                <p style="text-align: center;">© TAKA Tomoyasu 2021</p>
+            </div>
+        </div>
+    </footer>
+
+
+
+</body>
+
+</html>
